@@ -5,7 +5,7 @@ if ENV['TRAVIS']
   require 'coveralls'
   Coveralls.wear!
 else
-# TODO: Renable in a guard that prevents the at_exit hooks to interfere with mutant killforks.
+# TODO: Renable in a guard that prevents the hooks to interfere with mutant killforks.
 # require 'simplecov'
 # SimpleCov.start
 end
@@ -21,10 +21,8 @@ require 'mutant-rspec'
 # TODO: Push this down to a configuration option.
 #
 module Mutant
-
   module Rspec
     class Killer
-
       # Return all example groups
       #
       # @return [Enumerable<RSpec::Example>]
@@ -34,7 +32,6 @@ module Mutant
       def example_groups
         strategy.example_groups
       end
-
     end # Rspec
   end # Killer
 end # Mutant
