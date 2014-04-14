@@ -5,6 +5,7 @@ if ENV['TRAVIS']
   require 'coveralls'
   Coveralls.wear!
 else
+# TODO: Renable in a guard that prevents the at_exit hooks to interfere with mutant killforks.
 # require 'simplecov'
 # SimpleCov.start
 end
@@ -17,9 +18,7 @@ require 'mutant-rspec'
 
 # Monkeypatch to mutant all specs per mutation.
 #
-# TODO: Use master once it supports configurable implicit coverage.
-#
-# Morpher predicates are needed to finally make this configurable in mutant.
+# TODO: Push this down to a configuration option.
 #
 module Mutant
 
