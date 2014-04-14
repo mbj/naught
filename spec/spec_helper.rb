@@ -1,14 +1,14 @@
 GEM_ROOT = File.expand_path('../../', __FILE__)
 $LOAD_PATH.unshift File.join(GEM_ROOT, 'lib')
 
-if ENV['TRAVIS']
-  require 'coveralls'
-  Coveralls.wear!
-else
-# TODO: Renable in a guard that prevents the hooks to interfere with mutant killforks.
-# require 'simplecov'
+# if ENV['TRAVIS']
+#   require 'coveralls'
+#   Coveralls.wear!
+# else
+# # TODO: Renable in a guard that prevents the hooks to interfere with mutant killforks.
+# # require 'simplecov'
 # SimpleCov.start
-end
+# end
 
 require 'naught'
 Dir[File.join(GEM_ROOT, 'spec', 'support', '**/*.rb')].each { |f| require f }
