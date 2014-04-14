@@ -26,7 +26,7 @@ task :mutant => :spec do
   arguments << '--include' << 'lib'
   arguments << '--require' << 'naught'
   arguments << '--use'     << 'rspec'
-  arguments << '--score'   << '12.19'
+  arguments << '--score'   << '87.02'
   arguments << 'Naught*'
   ignores.each do |ignore|
     arguments << '--ignore-subject' << ignore
