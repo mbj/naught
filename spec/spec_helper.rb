@@ -32,6 +32,6 @@ module Mutant
       def example_groups
         strategy.example_groups
       end
-    end # Rspec
-  end # Killer
+    end # Killer
+  end # Rspec
 end # Mutant
